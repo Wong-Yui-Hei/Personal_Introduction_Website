@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .project {
+            display: none;
+        }
+        .project.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-wrapper">
+    <div id="mainMenu">
+        <header>
+            <!-- Header section with navigation links -->
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </header>
+    </div>
+    <button id="prevBtn">Previous</button>
+
+    <div id="projectContainer">
+        <div class="project project1">
+            <h2>Database</h2>
+            <p>This is the Assignment 1 of my Database Level 2 course. This is a tool rental management system.</p>
+            <p>Date Completed: 2024-02-20</p>
+            <p>Technologies Used: MS Access, SQL Server Manager 2019, MySQL Workbench</p>
+            <img src="image/Access.png" alt="DatabaseProject" title="Access" class="p" width="650">
+        </div>
+
+        <div class="project project2">
+            <h2>Java</h2>
+            <p>This is the Assignment 1 of my Object Oriented Programming (Java) Level 2 course. It is used to record the information of patients and calculate the BMI.</p>
+            <p>Date Completed: 2024-03-06</p>
+            <p>Technologies Used: Java, Eclipse</p>
+            <img src="image/TestDemo.png" alt="JavaProject" title="TestDemo" class="p" width="650">
+        </div>
+
+        <div class="project project3">
+            <h2>Web Programming</h2>
+            <p>This is the Lab 2 assignment of my Web Programming Level 2 course. Registration form is created.</p>
+            <p>Date Completed: 2024-02-15</p>
+            <p>Technologies Used: HTML, CSS</p>
+            <img src="image/WebProgrammingLab2.png" alt="Web Programming Lab 2 screenshot" title="Web Programming Lab 2" class="p" width="650">
+        </div>
+
+        <div class="project project4">
+            <h2>Database</h2>
+            <p>This is the Lab 3a of my Database Level 2 course. This is a lab to learn how trigger can be created.</p>
+            <p>Date Completed: 2024-02-07</p>
+            <p>Technologies Used: MS Access, SQL Server Manager 2019, MySQL Workbench</p>
+            <img src="image/trigger.png" alt="DatabaseProject" title="Access" class="p" width="650">
+        </div>
+
+    </div>
+    <button id="nextBtn">Next</button>
+
+
+    <script>
+        var projects = document.querySelectorAll('.project');
+        var currentIndex = 0;
+
+        // Initially show the first project
+        projects[currentIndex].classList.add('active');
+
+        document.getElementById('prevBtn').addEventListener('click', function() {
+            projects[currentIndex].classList.remove('active');
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = projects.length - 1;
+            }
+            projects[currentIndex].classList.add('active');
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            projects[currentIndex].classList.remove('active');
+            currentIndex++;
+            if (currentIndex >= projects.length) {
+                currentIndex = 0;
+            }
+            projects[currentIndex].classList.add('active');
+        });
+    </script>
+<footer></footer>
+    </div>
+</body>
+
+</html>

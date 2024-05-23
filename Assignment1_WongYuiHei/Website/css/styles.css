@@ -1,0 +1,242 @@
+/*Format the index.html from here*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    background-color: #FFBF40;
+    margin-top: 20px;
+    padding-top: 10px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 2vw;
+    text-decoration: none;
+    padding: 2vh 2vw;
+}
+
+#mainMenu {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    place-content: center;
+    background-color: rgb(87, 167, 91);
+}
+
+#photoBox {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    background-color: #FFD700;
+}
+
+.myPhoto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 2vh auto;
+}
+
+#mainContent {
+    grid-column: 2/5;
+    grid-row: 2/4;
+    background-color: #b2dbc7;
+    padding: 2vh 2vw;
+}
+
+.Welcome h2 {
+    color: #333;
+}
+
+.description p {
+    color: #333;
+}
+
+.aboutMe, .aboutCollege {
+    margin-top: 2vh;
+}
+
+.aboutMe h2, .aboutCollege h2 {
+    color: #333;
+}
+
+footer {
+    grid-column: span 4;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1vh 2vw;
+}
+/*Formating of index.html end here*/
+
+/*Format the resume.html from here*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 4; /* Adjust the span to cover the desired columns */
+}
+
+.ContactInfo,
+.Summary,
+.WorkExperience,
+.Skills,
+.Education {
+    max-width: 600px; /* Set a max-width for better readability */
+    margin: 20px 0; /* Add some vertical margin for separation */
+    text-align: center; /* Center text within the sections */
+}
+
+.ContactInfo ul,
+.Summary ul,
+.WorkExperience ul,
+.Skills ul,
+.Education ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.ContactInfo h1,
+.Summary h1,
+.WorkExperience h1,
+.Skills h1,
+.Education h1 {
+    color: #333;
+}
+/*Formating of resume.html end here*/
+
+/* Format the Project.html from here */
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px; /* Adjust the padding for smaller buttons */
+    border: none;
+    cursor: pointer;
+    font-size: 14px; /* Adjust the font size for smaller buttons */
+}
+
+#prevBtn {
+    grid-column: 1/1;
+    grid-row: 2/4;
+}
+#nextBtn {
+    grid-column: span 1; /* Adjust span to cover one column */
+    grid-column: 4/4;
+    grid-row: 2/4;
+    margin-left: 20px; /* Add a left margin to create a gap */
+}
+
+#projectContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column: 2/5;
+    grid-row: 2/4;
+    gap: 20px;
+}
+
+.project {
+    display: none;
+    padding: 20px;
+    background-color: #b2dbc7;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.project.active {
+    display: block;
+}
+
+#nextBtn {
+    grid-column: span 1; /* Adjust span to cover one column */
+    grid-column: 4/4;
+    grid-row: 2/4;
+}
+
+#projectContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    gap: 10px;
+}
+
+.project {
+    display: none;
+    padding: 20px;
+    background-color: #b2dbc7;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.project.active {
+    display: block;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+/*Formating of Projects.html end here*/
+
+/* Format the Contact.html from here */
+main {
+    grid-column: span 4; /* Adjust the span to cover the desired columns */
+    text-align: center; /* Center the content */
+    padding: 20px;
+}
+
+.Contact {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button#submit {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+/*Formating of Contact.html end here*/
+

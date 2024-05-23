@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="flex-wrapper">
+    <div id="mainMenu">
+        <header>
+            <!-- Header section with navigation links -->
+            <div class="homeHtml"><a href="index.html">Home</a></div>
+            <div class="resumeHtml"><a href="resume.html">Resume</a></div>
+            <div class="projectHtml"><a href="projects.html">Projects</a></div>
+            <div class="ContactHtml"><a href="contact.html">Contact</a></div>
+        </header>
+    </div>
+    
+    <!-- Main content area -->
+    <main>
+        <p class="Contact"><b>Contact</b></p>
+        <form action="/submit_contact" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Wong Yui Hei" required><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            
+            <!-- Textarea for message -->
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br>
+            
+            <!-- Submit button for the form -->
+            <button type="submit" id="submit">Submit</button>
+        </form> 
+    </main>
+    <footer></footer>
+    </div>
+</body>
+
+</html>
